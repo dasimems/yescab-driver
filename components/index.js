@@ -23,6 +23,7 @@ import GettingStartedFooter from "./getting-started/GettingStartedFooter";
 import RegistrationFooter from "./getting-started/RegistrationFooter";
 import RegistrationHeader from "./getting-started/RegistrationHeader";
 import Map from "./navigation/Map";
+import TripSummary from "./navigation/TripSummary";
 import ProfileDetailsCard from "./profile/ProfileDetailsCard";
 import ProfileRoute from "./profile/ProfileRoute";
 import ProfileHeader from "./profile/inner/Header";
@@ -73,5 +74,6 @@ export {
   ProfileHeader,
   Stats,
   StatCard,
-  ProfileRoute
+  ProfileRoute,
+  TripSummary
 };

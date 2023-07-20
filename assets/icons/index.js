@@ -29,7 +29,8 @@ import {
   RefreshCcw,
   ArrowRightIcon,
   ChevronRight,
-  Check
+  Check,
+  List
 } from "lucide-react-native";
 import UserVerifiedIcon from "./iconoir_verified-user.svg"
 import { MaterialIcons } from "@expo/vector-icons";
@@ -37,6 +38,8 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { blackColor } from "../colors";
 import { Ionicons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 import {
   Activity,
   Chat,
@@ -381,12 +384,11 @@ export const NavigationIcon = ({ size, color }) => {
   );
 };
 
-export const TripsIcon = ({ size, set, color }) => {
+export const TripsIcon = ({ size, color }) => {
   return (
-    <Activity
-      set={set ? set : "light"}
+    <List
       size={size ? size : 20}
-      primaryColor={color ? color : blackColor.default}
+      color={color ? color : blackColor.default}
     />
   );
 };
