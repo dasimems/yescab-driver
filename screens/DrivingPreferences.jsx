@@ -12,6 +12,7 @@ import { lato } from "../fonts";
 import { useNavigation } from "@react-navigation/native";
 import DropDownPicker from "react-native-dropdown-picker";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { CarIcon, TruckIcon } from "../assets/icons";
 
 const DrivingPreferences = () => {
   const selectOptions = [
@@ -64,10 +65,12 @@ const DrivingPreferences = () => {
           }}
         >
           <PreferenceCard
+            Icon={CarIcon}
             title="Car Ride"
             active={value && Array.isArray(value) && value.includes("car")}
           />
           <PreferenceCard
+            Icon={TruckIcon}
             title="Delivery"
             active={value && Array.isArray(value) && value.includes("delivery")}
           />
