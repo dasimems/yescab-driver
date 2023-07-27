@@ -3,44 +3,42 @@ import React from "react";
 import { AngleRight, UserVerified } from "../../assets/icons";
 import { lato } from "../../fonts";
 import { blackColor } from "../../assets/colors";
+import { useNavigation } from "@react-navigation/native";
 
-const ProfileRoute = ({ title, description, name }) => {
+const ProfileRoute = ({ label, description, name }) => {
+  const { navigate } = useNavigation();
   return (
     <TouchableOpacity
+      onPress={() => {
+        navigate(name);
+      }}
       style={{
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "space-between",
+        justifyContent: "space-between"
       }}
     >
       <View
         style={{
           flexDirection: "row",
           alignItems: "center",
-          gap: 10,
+          gap: 10
         }}
       >
         <UserVerified />
 
         <View
           style={{
-            gap: 6,
+            gap: 6
           }}
         >
           <Text
             style={{
               fontFamily: lato.bold.default,
+              color: blackColor.opacity700
             }}
           >
-            {title}
-          </Text>
-          <Text
-            style={{
-              fontFamily: lato.regular.default,
-              color: blackColor.opacity600,
-            }}
-          >
-            {description}
+            {label}
           </Text>
         </View>
       </View>

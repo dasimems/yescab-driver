@@ -5,7 +5,7 @@ import { bauhs93, lato } from './fonts';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { AppContainer, CameraContainer, Modal, Providers, ScreenContainer } from './components';
-import { AddProfilePicture, ChatDetails, Chats, ChooseVehicle, DrivingPreferences, Earnings, ExtraRateDetails, GettingStarted, GettingStartedTwo, History, Login, Navigation, NewBank, OTP, Profile, Rating, RatingDetails, Register,  TripDetails,  VehicleDetails, Wallet, Withdraw } from './screens';
+import { AddProfilePicture, ChatDetails, Chats, ChooseVehicle, DrivingPreferences, Earnings, EditProfile, ExtraRateDetails, GettingStarted, GettingStartedTwo, History, Login, Navigation, NewBank, OTP, Profile, Rating, RatingDetails, Register,  TripDetails,  VehicleDetails, Wallet, Withdraw } from './screens';
 import { NavNames } from './data/general';
 
 
@@ -45,6 +45,7 @@ export default function App() {
                 <Stack.Screen name={NavNames.Earnings.name} component={Earnings} />
                 <Stack.Screen name={NavNames.DrivingPreference.name} component={DrivingPreferences} />
                 <Stack.Screen name={NavNames.Withdraw.name} component={Withdraw} />
+                <Stack.Screen name={NavNames.EditProfile.name} component={EditProfile} />
                 <Stack.Screen name={NavNames.NewBank.name} component={NewBank} />
                 <Stack.Screen name={NavNames.Wallet.name} component={Wallet} />
                 <Stack.Screen name={NavNames.Register.name} component={Register} />

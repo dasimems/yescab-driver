@@ -45,7 +45,7 @@ const Contents = ({children, header, headerText, headerTextStyle, headerStyle, s
 
                       <Text style={{
                           fontFamily: lato.black.default,
-                          fontSize: 20,
+                          fontSize: 15,
                           ...headerTextStyle
                       }}>{headerText? headerText : screenName}</Text>
                   </View>

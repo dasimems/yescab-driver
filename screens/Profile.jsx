@@ -3,7 +3,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from "react-native";
 import React from "react";
 import {
@@ -14,13 +14,13 @@ import {
   ProfileDetailsCard,
   ProfileRoute,
   RoundedImage,
-  Stats,
+  Stats
 } from "../components";
 import {
   blackColor,
   dangerColor,
   primaryColor,
-  whiteColor,
+  whiteColor
 } from "../assets/colors";
 import { lato } from "../fonts";
 import { useNavigation } from "@react-navigation/native";
@@ -39,7 +39,7 @@ const Header = () => {
         gap: 10,
         paddingHorizontal: padding,
         paddingVertical: 15,
-        alignItems: "center",
+        alignItems: "center"
       }}
     >
       <TouchableOpacity
@@ -53,7 +53,7 @@ const Header = () => {
       <Text
         style={{
           fontSize: 18,
-          fontFamily: lato.bold.default,
+          fontFamily: lato.bold.default
         }}
       >
         My Account
@@ -69,39 +69,39 @@ const Profile = () => {
     {
       stat: "3,251",
       label: "Trips",
-      action: () => navigate(NavNames.History.name),
+      action: () => navigate(NavNames.History.name)
     },
 
     {
       stat: "4.90",
       label: "Ratings",
-      action: () => navigate(NavNames.Rating.name),
+      action: () => navigate(NavNames.Rating.name)
     },
 
     {
       stat: "2",
-      label: "Months",
-    },
+      label: "Months"
+    }
   ];
 
   return (
     <LoggedInContainer removeSafeView header={<Header />} navHidden>
       <View
         style={{
-          flex: 1,
+          flex: 1
         }}
       >
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{
-            gap: 28,
+            gap: 28
           }}
         >
           <View
             style={{
               alignItems: "center",
               marginTop: 20,
-              gap: 10,
+              gap: 10
             }}
           >
             <RoundedImage
@@ -116,7 +116,7 @@ const Profile = () => {
                 fontFamily: lato.bold.default,
                 color: blackColor.opacity600,
                 fontSize: 18,
-                textAlign: "center",
+                textAlign: "center"
               }}
             >
               John Doe
@@ -127,7 +127,7 @@ const Profile = () => {
                 fontFamily: lato.regular.default,
                 color: blackColor.opacity500,
                 fontSize: 13,
-                textAlign: "center",
+                textAlign: "center"
               }}
             >
               +(234) 903-366-4645
@@ -137,7 +137,7 @@ const Profile = () => {
               style={{
                 flexDirection: "row",
                 alignItems: "center",
-                gap: 3,
+                gap: 3
               }}
             >
               <StarIcon set="bold" color={"#FFCC00"} />
@@ -147,7 +147,7 @@ const Profile = () => {
                   fontFamily: lato.regular.default,
                   color: blackColor.opacity500,
                   fontSize: 13,
-                  textAlign: "center",
+                  textAlign: "center"
                 }}
               >
                 4.9
@@ -157,26 +157,26 @@ const Profile = () => {
 
           <View
             style={{
-              gap: 28,
+              gap: 28
             }}
           >
             <View
               style={{
-                alignItems: "center",
+                alignItems: "center"
               }}
             >
               <Stats
                 stats={stats}
                 style={{
                   shadowColor: blackColor.opacity500,
-                  borderColor: "rgba(0, 0, 0, .01)",
+                  borderColor: "rgba(0, 0, 0, .01)"
                 }}
               />
             </View>
 
             <View
               style={{
-                gap: 20,
+                gap: 20
               }}
             >
               {/* <ProfileDetailsCard
@@ -196,19 +196,19 @@ const Profile = () => {
             <View
               style={{
                 paddingTop: 10,
-                gap: 12,
+                gap: 30
               }}
             >
               <Text
                 style={{
                   fontFamily: lato.bold.default,
-                  fontSize: 15,
+                  fontSize: 15
                 }}
               >
                 Account Settings
               </Text>
 
-              {profileLinks.map(({ Icon, label, name }, index) => (
+              {profileLinks.map(({ Icon, label, name }, index) =>
                 <ProfileRoute
                   label={label}
                   name={name}
@@ -217,7 +217,7 @@ const Profile = () => {
                     <Icon color={primaryColor.default} set="bold" size={25} />
                   }
                 />
-              ))}
+              )}
             </View>
           </View>
         </ScrollView>
@@ -225,7 +225,7 @@ const Profile = () => {
       <View
         style={{
           alignItems: "center",
-          paddingVertical: 20,
+          paddingVertical: 20
         }}
       >
         <TouchableOpacity
@@ -236,7 +236,7 @@ const Profile = () => {
             borderRadius: 10,
             flexDirection: "row",
             alignItems: "center",
-            gap: 10,
+            gap: 10
           }}
           onPress={() => {
             navigate(NavNames.Login.name);
@@ -244,7 +244,7 @@ const Profile = () => {
         >
           <Text
             style={{
-              fontFamily: lato.bold.default,
+              fontFamily: lato.bold.default
             }}
           >
             Log out
@@ -261,15 +261,15 @@ export default Profile;
 
 const styles = StyleSheet.create({
   contentTitleStyle: {
-    fontFamily: lato.bold.default,
+    fontFamily: lato.bold.default
   },
   contentValueStyle: {
     fontFamily: lato.regular.default,
-    color: blackColor.opacity500,
+    color: blackColor.opacity500
   },
   accountContentStyle: {
     flexDirection: "row",
     gap: 5,
-    justifyContent: "space-between",
-  },
+    justifyContent: "space-between"
+  }
 });
