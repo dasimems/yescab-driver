@@ -1,6 +1,7 @@
 import MessageCard from "./chatDetails/MessageCard";
 import ChatCard from "./chats/ChatCard";
 import ChatOptions from "./chats/ChatOptions";
+import PreferenceCard from "./driving-preferences/PreferenceCard";
 import EarningChart from "./earnings/EarningChart";
 import AppContainer from "./general/AppContainer";
 import Button from "./general/Button";
@@ -75,5 +76,6 @@ export {
   Stats,
   StatCard,
   ProfileRoute,
-  TripSummary
+  TripSummary,
+  PreferenceCard
 };

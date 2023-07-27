@@ -7,7 +7,7 @@ import {
   Map,
   Nav,
   RoundedImage,
-  TripSummary,
+  TripSummary
 } from "../components";
 import { blackColor, primaryColor, whiteColor } from "../assets/colors";
 import { lato } from "../fonts";
@@ -20,7 +20,7 @@ import {
   LocationDot2,
   OptionIcon,
   Search,
-  SendIcon2,
+  SendIcon2
 } from "../assets/icons";
 
 const Header = () => {
@@ -33,7 +33,7 @@ const Header = () => {
         justifyContent: "space-between",
         alignItems: "center",
         paddingHorizontal: padding,
-        paddingVertical: 15,
+        paddingVertical: 15
       }}
     >
       <TouchableOpacity
@@ -51,14 +51,14 @@ const Header = () => {
           borderRadius: 20,
           flexDirection: "row",
           alignItems: "center",
-          gap: 10,
+          gap: 10
         }}
       >
         <Text
           style={{
             fontFamily: lato.regular.default,
             color: whiteColor.default,
-            marginLeft: 10,
+            marginLeft: 10
           }}
         >
           Online
@@ -71,14 +71,18 @@ const Header = () => {
             borderRadius: 25,
             backgroundColor: whiteColor.default,
             alignItems: "center",
-            justifyContent: "center",
+            justifyContent: "center"
           }}
         >
           <CarIcon size={17} color={primaryColor.default} />
         </View>
       </View>
 
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigate(NavNames.DrivingPreference.name);
+        }}
+      >
         <OptionIcon color={blackColor.opacity500} />
       </TouchableOpacity>
     </View>
@@ -91,13 +95,13 @@ const Navigation = () => {
     <LoggedInContainer
       header={<Header />}
       containerStyle={{
-        paddingHorizontal: 0,
+        paddingHorizontal: 0
       }}
     >
       <View
         style={{
           flex: 1,
-          position: "relative",
+          position: "relative"
         }}
       >
         <Map />
@@ -106,14 +110,14 @@ const Navigation = () => {
           style={{
             position: "absolute",
             bottom: 0,
-            width: "100%",
+            width: "100%"
           }}
         >
           <View
             style={{
               alignItems: "flex-end",
               paddingHorizontal: padding,
-              paddingVertical: 15,
+              paddingVertical: 15
             }}
           >
             <TouchableOpacity
@@ -123,7 +127,7 @@ const Navigation = () => {
                 backgroundColor: whiteColor.default,
                 alignItems: "center",
                 justifyContent: "center",
-                borderRadius: 900,
+                borderRadius: 900
               }}
             >
               <LocationDot2 color={blackColor.default} />

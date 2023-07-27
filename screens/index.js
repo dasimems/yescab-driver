@@ -19,6 +19,7 @@ import Rating from "./Rating";
 import RatingDetails from "./RatingDetails";
 import ExtraRateDetails from "./ExtraRateDetails";
 import TripDetails from "./TripDetails";
+import DrivingPreferences from "./DrivingPreferences";
 
 export {
   GettingStarted,
@@ -41,5 +42,6 @@ export {
   Rating,
   RatingDetails,
   ExtraRateDetails,
-  TripDetails
+  TripDetails,
+  DrivingPreferences
 };

@@ -36,6 +36,12 @@ export const NavNames = {
     navShown: false,
     Icon: Menu
   },
+  DrivingPreference: {
+    name: "DrivingPreference",
+    label: "Driving Preference",
+    navShown: false,
+    Icon: Menu
+  },
 
   Login: {
     name: "Login",
@@ -161,8 +167,7 @@ export const NavNames = {
     label: "TripDetails",
     navShown: false,
     Icon: StarIcon
-  },
-  
+  }
 };
 
 export const countryData = CountryListJson.map(country => ({
